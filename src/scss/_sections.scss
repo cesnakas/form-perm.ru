@@ -1,0 +1,25 @@
+.section {
+
+  &__main {
+    display: flex;
+    align-items: center;
+    min-height: 512px;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    background-color: #F6F6F6;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/home-bg.png);
+
+    h1 {
+      font-weight: 700;
+      line-height: 1.1;
+      color: #2B2A29;
+
+      span {
+        color: #66C3D0;
+      }
+    }
+  }
+}
