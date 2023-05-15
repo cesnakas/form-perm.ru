@@ -3,7 +3,9 @@
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 1.25rem;
-  background-color: #F6F6F6;
+  @include media-breakpoint-up(lg) {
+    background-color: #F6F6F6;
+  }
 
   &-text {
     display: flex;

@@ -1,14 +1,17 @@
 .hero {
   display: flex;
   align-items: center;
-  min-height: 512px;
+  height: 368px;
   padding: 1rem;
   border-radius: 1.25rem;
-  background-color: #F6F6F6;
+  background-color: $section-bg-gray;
   background-position: 100% 50%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100%, contain;
   background-image: url(../img/home-bg.png);
+  @include media-breakpoint-up(lg) {
+    height: 512px;
+  }
 
   h1 {
     font-weight: 700;
