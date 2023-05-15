@@ -1,0 +1,31 @@
+// 1. Utilities, helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'bootstrap/scss/bootstrap';
+
+// 3. Base
+@import
+  'base/reset',
+  'base/fonts',
+  'base/typography';
+
+// 4. Layout, partials
+@import
+  'layout/grid',
+  'layout/forms',
+  'layout/navigation',
+  'layout/header',
+  'layout/footer';
+
+// 5. Components, modules
+@import
+  'components/buttons';
+
+// 6. Sections
+@import
+  'sections/hero';
