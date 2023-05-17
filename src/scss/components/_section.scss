@@ -1,0 +1,7 @@
+.section {
+  margin-bottom: 3rem;
+
+  &__bg--gray {
+    background-color: $section-bg-gray;
+  }
+}

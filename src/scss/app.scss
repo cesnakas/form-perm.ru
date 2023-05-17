@@ -24,9 +24,11 @@
 
 // 5. Components, modules
 @import
-  'components/buttons';
+  'components/buttons',
+  'components/section';
 
 // 6. Sections
 @import
   'sections/hero',
-  'sections/manufacture';
+  'sections/manufacture',
+  'sections/gallery';
