@@ -1,5 +1,60 @@
 .samples {
-  min-height: 440px;
+  overflow: hidden;
   border-radius: $section-border-radius;
   background-color: $section-bg-gray;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 1rem 1rem 1.5rem;
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: none;
+    @include media-breakpoint-up(md) {
+      align-items: flex-start;
+      min-height: 304px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      background-image: url(/img/samples_bg-md.png);
+    }
+    @include media-breakpoint-up(xl) {
+      min-height: 440px;
+      background-image: url(/img/samples_bg-lg.png);
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__text {
+    margin-bottom: .5rem;
+    font-size: 16px;
+    font-weight: 400;
+    @include media-breakpoint-up(md) {
+      max-width: 30vw;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__picture {
+    margin: 0 -1rem -3rem;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      //max-height: 296px;
+      object-fit: contain;
+      object-position: center top;
+    }
+  }
 }
