@@ -4,45 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ФОРМ</title>
-  <script type="module" src="./js/main.js"></script>
 </head>
 <body>
   <div class="container">
+
     <header class="navbar navbar-expand-lg" role="banner">
-      <div class="container gx-5">
+      <div class="container gx-0 gx-lg-5">
         <a class="navbar-brand" href="/">
           <img src="img/logo.svg" width="184" height="64" alt="ФОРМ">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Производство</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Комплетующие для потолков</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Комплетующие для окон ПВХ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Доставка</a>
-            </li>
-          </ul>
-          <div class="navbar-text align-items-lg-end text-lg-end">
-            <a class="mb-2" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#2B2A29" width="16" height="16">
-                <path d="M10.4755 14.951c1.17 0 1.9629-.3364 2.6797-1.1203.0524-.0524.098-.1102.1504-.1638.3921-.4426.5881-.9039.5881-1.3318 0-.5002-.2728-.9537-.8712-1.3701l-1.9921-1.38398c-.6292-.43445-1.35037-.47171-1.91408.08892l-.49874.49996c-.17452.1757-.33618.1848-.53475.0476-.35737-.24088-1.04508-.84328-1.51651-1.3135-.48133-.47583-.96736-1.0252-1.22973-1.43263-.13352-.19863-.12133-.3536.05317-.52932l.49447-.49874c.56735-.56369.53129-1.29039.09563-1.91289L4.56263 2.50944c-.39884-.5779-.87041-.85124-1.37183-.85674-.43152-.00549-.88072.18388-1.32456.57362-.05785.05116-.11143.09683-.16446.13888C.910127 3.09525.571289 3.87739.571289 5.0877c0 1.97424 1.144821 4.30338 3.370451 6.517 2.21343 2.2002 4.52275 3.3463 6.53376 3.3463Zm-.003-1.118c-1.70641.0287-3.8395-1.1947-5.68715-3.0248-1.85866-1.84232-3.12054-4.04786-3.09188-5.75425.01098-.72094.26424-1.35107.77638-1.79076.045-.04379.09121-.0821.1417-.11799.18456-.16206.39228-.24858.57255-.24858.19848 0 .37379.07728.50344.27818l1.26294 1.88718c.1551.22929.16125.48898-.06562.71224l-.54107.53623c-.50853.49463-.46232 1.06915-.13715 1.52383.36241.5084 1.03741 1.27412 1.59938 1.8312.60001.59522 1.42596 1.33162 1.91384 1.68752.45589.3264 1.03594.3671 1.52932-.1371l.53628-.5399c.22324-.2281.47744-.2195.70794-.0711l1.8582 1.234c.2045.1352.2837.305.2837.5022 0 .1858-.0853.388-.2541.5793-.0359.0505-.0687.0912-.1125.1417-.4451.5066-1.0753.7599-1.7962.7709Z"/><path d="M7.92914 7.61582c.3664.3652.95194.3652 1.31714 0 .36097-.36646.36097-.952 0-1.30623-.3652-.37311-.95074-.37311-1.31714-.01097-.36646.3652-.36646.95074 0 1.3172Zm.67377-3.76166c-.23114.22687-.23114.60401 0 .83088l2.25699 2.26124c.228.22811.604.22691.8296 0 .2282-.22566.2282-.6016 0-.82967L9.42828 3.85416c-.22805-.22688-.604-.22688-.82537 0Zm2.44569.65316c.3652.34996.9507.35545 1.3117-.01098.3597-.35973.3597-.94526 0-1.3062-.361-.36643-.952-.36643-1.3117-.0067-.3676.36764-.3676.94768 0 1.32388Zm.6725-3.764727c-.2268.225669-.2256.597317 0 .829687l2.2515 2.25576c.2336.23357.6096.23357.8352 0 .2281-.22688.2281-.59732 0-.8254L12.5533.742593c-.2336-.22808-.6095-.22808-.8322 0Z"/>
-              </svg>
-              +7 (342) 207 29 20
+
+        <div class="offcanvas offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="navbarLabel">
+          <div class="offcanvas-header">
+            <a class="offcanvas-title" id="navbarLabel" href="/">
+              <img src="img/logo.svg" width="184" height="64" alt="ФОРМ">
             </a>
-            <span class="small">г.Пермь,<br class="d-none d-md-block d-xl-none"> ул.&nbsp;Промышленая,&nbsp;123а</span>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Производство</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Комплетующие для потолков</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Комплетующие для окон ПВХ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Доставка</a>
+              </li>
+            </ul>
+            <div class="navbar-text align-items-lg-end text-lg-end">
+              <a class="mb-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#2B2A29" width="16" height="16">
+                  <path d="M10.4755 14.951c1.17 0 1.9629-.3364 2.6797-1.1203.0524-.0524.098-.1102.1504-.1638.3921-.4426.5881-.9039.5881-1.3318 0-.5002-.2728-.9537-.8712-1.3701l-1.9921-1.38398c-.6292-.43445-1.35037-.47171-1.91408.08892l-.49874.49996c-.17452.1757-.33618.1848-.53475.0476-.35737-.24088-1.04508-.84328-1.51651-1.3135-.48133-.47583-.96736-1.0252-1.22973-1.43263-.13352-.19863-.12133-.3536.05317-.52932l.49447-.49874c.56735-.56369.53129-1.29039.09563-1.91289L4.56263 2.50944c-.39884-.5779-.87041-.85124-1.37183-.85674-.43152-.00549-.88072.18388-1.32456.57362-.05785.05116-.11143.09683-.16446.13888C.910127 3.09525.571289 3.87739.571289 5.0877c0 1.97424 1.144821 4.30338 3.370451 6.517 2.21343 2.2002 4.52275 3.3463 6.53376 3.3463Zm-.003-1.118c-1.70641.0287-3.8395-1.1947-5.68715-3.0248-1.85866-1.84232-3.12054-4.04786-3.09188-5.75425.01098-.72094.26424-1.35107.77638-1.79076.045-.04379.09121-.0821.1417-.11799.18456-.16206.39228-.24858.57255-.24858.19848 0 .37379.07728.50344.27818l1.26294 1.88718c.1551.22929.16125.48898-.06562.71224l-.54107.53623c-.50853.49463-.46232 1.06915-.13715 1.52383.36241.5084 1.03741 1.27412 1.59938 1.8312.60001.59522 1.42596 1.33162 1.91384 1.68752.45589.3264 1.03594.3671 1.52932-.1371l.53628-.5399c.22324-.2281.47744-.2195.70794-.0711l1.8582 1.234c.2045.1352.2837.305.2837.5022 0 .1858-.0853.388-.2541.5793-.0359.0505-.0687.0912-.1125.1417-.4451.5066-1.0753.7599-1.7962.7709Z"/><path d="M7.92914 7.61582c.3664.3652.95194.3652 1.31714 0 .36097-.36646.36097-.952 0-1.30623-.3652-.37311-.95074-.37311-1.31714-.01097-.36646.3652-.36646.95074 0 1.3172Zm.67377-3.76166c-.23114.22687-.23114.60401 0 .83088l2.25699 2.26124c.228.22811.604.22691.8296 0 .2282-.22566.2282-.6016 0-.82967L9.42828 3.85416c-.22805-.22688-.604-.22688-.82537 0Zm2.44569.65316c.3652.34996.9507.35545 1.3117-.01098.3597-.35973.3597-.94526 0-1.3062-.361-.36643-.952-.36643-1.3117-.0067-.3676.36764-.3676.94768 0 1.32388Zm.6725-3.764727c-.2268.225669-.2256.597317 0 .829687l2.2515 2.25576c.2336.23357.6096.23357.8352 0 .2281-.22688.2281-.59732 0-.8254L12.5533.742593c-.2336-.22808-.6095-.22808-.8322 0Z"/>
+                </svg>
+                +7 (342) 207 29 20
+              </a>
+              <span class="small">г.Пермь,<br class="d-none d-md-block d-xl-none"> ул.&nbsp;Промышленая,&nbsp;123а</span>
+            </div>
           </div>
         </div>
       </div>
     </header>
+
     <main role="main">
 
       <section class="section hero">
@@ -58,34 +70,45 @@
 
       <section class="section manufacture">
         <div class="container">
-          <div class="row">
+          <div class="row gx-5">
             <div class="col-lg-6">
-              <div>О производстве</div>
-              <h2>Завод экструзии Форм основан в <span>2013 году.</span></h2>
+              <div class="manufacture__title">О производстве</div>
+              <h2 class="manufacture__headline">Завод экструзии Форм основан в <span>2013 году.</span></h2>
               <p>Главное направление деятельности- экструзия полимеров: изготовление комплектующих из ПВХ для направлений металлопластиковые окна и натяжные потолки</p>
               <p><span>Наша философия:</span> экологичность и постоянное стремление к развитию.</p>
               <p>Мы тщательно контролируем всю последовательность действий, начиная от с проверки качества материалов и заканчивая испытаниями готовой продукции.</p>
             </div>
             <div class="col-lg-6">
-              <div class="row row-cols-2 row-cols-lg-3">
+              <div class="row row-cols-2 row-cols-xl-3 gx-5 gy-4 manufacture__items">
                 <div class="col">
-                  Собственное
-                  производство
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+                    <path stroke="#2B2A29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6 23.9998v8c.00072.7015.18589 1.3904.53692 1.9977.35104.6073.8556 1.1116 1.46308 1.4623l14 8c.6081.3511 1.2979.5359 2 .5359s1.3919-.1848 2-.5359l14-8c.6075-.3507 1.112-.855 1.4631-1.4623.351-.6073.5362-1.2962.5369-1.9977v-16c-.0007-.7014-.1859-1.3904-.5369-1.9977-.3511-.6073-.8556-1.1116-1.4631-1.4623l-14-8c-.6081-.35107-1.2979-.53589-2-.53589s-1.3919.18482-2 .53589l-14 8c-.60748.3507-1.11204.855-1.46308 1.4623-.35103.6073-.5362 1.2963-.53692 1.9977v2m24 6c0 3.3137-2.6863 6-6 6s-6-2.6863-6-6 2.6863-6 6-6 6 2.6863 6 6Z"/><path stroke="#66C3D0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24 30c3.3137 0 6-2.6863 6-6s-2.6863-6-6-6-6 2.6863-6 6 2.6863 6 6 6Z"/>
+                  </svg>
+                  <p>Собственное<br> производство</p>
                 </div>
                 <div class="col">
-                  10 лет на
-                  Российском рынке
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+                    <path stroke="#66C3D0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M32 2v6M16 2v6"/><path stroke="#2B2A29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M12 20h30v-8c0-2.20914-1.7909-4-4-4H10c-2.20914 0-4 1.79086-4 4v28c0 2.2091 1.79086 4 4 4h28c2.2091 0 4-1.7909 4-4V26m-8 10h-8"/><path stroke="#66C3D0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M34.2858 36h-8.5714"/>
+                  </svg>
+                  <p>10 лет на<br> Российском рынке</p>
                 </div>
                 <div class="col">
-                  Индивидуальный
-                  подход
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+                    <g stroke-linecap="round" stroke-linejoin="round" stroke-width="4" clip-path="url(#a)"><path stroke="#66C3D0" d="m34 22 4 4 8-8"/><path stroke="#2B2A29" d="M17 22c4.4183 0 8-3.5817 8-8 0-4.41828-3.5817-8-8-8s-8 3.58172-8 8c0 4.4183 3.5817 8 8 8ZM26.0004 42.2841c2.776-.4997 4.9769-1.2612 6-2.2843.1438-1.2938 0-3.3334 0-3.3334 0-1.7681-.8428-3.4638-2.3431-4.714-4.7379-3.9483-20.57583-3.9483-25.31374 0-1.50029 1.2502-2.34315 2.9459-2.34315 4.714 0 0-.14375 2.0396 0 3.3334 1.02314 1.0231 3.22396 1.7846 6 2.2843"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h48v48H0z"/></clipPath></defs>
+                  </svg>
+                  <p>Индивидуальный<br> подход</p>
                 </div>
                 <div class="col">
-                  Образцы
-                  до двери
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+                    <path stroke="#2B2A29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M30 23.9999H18v20h-8c-1.06087 0-2.07828-.4214-2.82843-1.1715C6.42143 42.0782 6 41.0608 6 39.9999V19.9563c0-1.2344.56989-2.3996 1.54424-3.1574L21.5442 5.90997c1.4445-1.12345 3.4671-1.12345 4.9116.00001l14 10.88892c.9743.7578 1.5442 1.923 1.5442 3.1574v20.0436c0 1.0609-.4214 2.0783-1.1716 2.8285-.7501.7501-1.7675 1.1715-2.8284 1.1715h-8v-14"/><path stroke="#66C3D0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M21.5442 5.90991 7.54424 16.7988C6.56989 17.5566 6 18.7219 6 19.9562v20.0437c0 1.0608.42143 2.0783 1.17157 2.8284.75015.7502 1.76756 1.1716 2.82843 1.1716h8v-20h12"/>
+                  </svg>
+                  <p>Образцы<br> до двери</p>
                 </div>
                 <div class="col">
-                  Доставка
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 48 48">
+                    <path stroke="#66C3D0" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24 44V30M33 18.7999 15 8.41992"/><path stroke="#2B2A29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M42 31.9998v-16c-.0007-.7014-.1859-1.3904-.5369-1.9977-.3511-.6073-.8556-1.1116-1.4631-1.4623l-14-8c-.6081-.35107-1.2979-.53589-2-.53589s-1.3919.18482-2 .53589l-14 8c-.60747.3507-1.11204.855-1.46308 1.4623-.35103.6073-.5362 1.2963-.53692 1.9977v16c.00072.7015.18589 1.3904.53692 1.9977.35104.6073.85561 1.1116 1.46308 1.4623l14 8c.6081.3511 1.2979.5359 2 .5359s1.3919-.1848 2-.5359l14-8c.6075-.3507 1.112-.855 1.4631-1.4623.351-.6073.5362-1.2962.5369-1.9977Z"/><path stroke="#2B2A29" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M6.54004 13.9199 24 24.0199l17.46-10.1"/>
+                  </svg>
+                  <p>Доставка</p>
                 </div>
               </div>
             </div>
@@ -96,36 +119,106 @@
       <section class="section gallery">
         <div class="container">
           <picture>
-            <source srcset="../img/gallery-xs.jpg 2x" media="(max-width: 575.98px)">
-            <source srcset="../img/gallery-md.jpg 2x" media="(max-width: 767.98px)">
-            <source srcset="../img/gallery-lg.jpg 2x" media="(min-width: 992px)">
-            <img src="../img/gallery-lg.jpg" alt="ФОРМ">
+            <source srcset="../src/img/gallery-xs.jpg 2x" media="(max-width: 575.98px)">
+            <source srcset="../src/img/gallery-md.jpg 2x" media="(max-width: 767.98px)">
+            <source srcset="../src/img/gallery-lg.jpg 2x" media="(min-width: 992px)">
+            <img src="../src/img/gallery-lg.jpg" alt="ФОРМ">
           </picture>
         </div>
       </section>
 
       <section class="section ceiling-products">
         <div class="container">
-          <h2>Комплектующие для потолков</h2>
+          <h2 class="h2 text-center">Комплектующие для потолков</h2>
           <div class="row row-cols-1 row-cols-lg-2 g-3">
             <div class="col">
-              <div class="ceiling-products__item"></div>
+              <div class="ceiling-products__item">
+                <picture class="ceiling-products__picture">
+                  <source srcset="img/pvh_1-1.png 2x" media="(max-width: 767.98px)">
+                  <source srcset="img/pvh_1-1-md.png 2x" media="(min-width: 768px)">
+                  <img src="img/pvh_1-1.png" srcset="img/pvh_1-1.png 2x" alt="Багет невидимый стеновой">
+                </picture>
+                <div class="ceiling-products__title">Багет невидимый стеновой</div>
+                <ul class="ceiling-products__list">
+                  <li>цвет белый</li>
+                  <li>перфорация шаг 150мм/ d 6мм<br> по просьбе клиента шаг может быть любым</li>
+                  <li>метраж 2,5м</li>
+                  <li>пачка 100м</li>
+                  <li>сертификат</li>
+                </ul>
+                <div class="ceiling-products__buttons">
+                  <button class="btn btn-primary">Заказать</button>
+                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <div class="ceiling-products__item"></div>
+              <div class="ceiling-products__item">
+                <img class="ceiling-products__image" src="img/pvh_1-1.png" srcset="img/pvh_1-1.png 2x" alt="Багет невидимый стеновой">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="ceiling-products__item">
+                <picture class="ceiling-products__picture">
+                  <source srcset="img/pvh_1-2.png 2x" media="(max-width: 767.98px)">
+                  <source srcset="img/pvh_1-2-md.png 2x" media="(min-width: 768px)">
+                  <img class="ceiling-products__image_mobile" src="img/pvh_1-2.png" srcset="img/pvh_1-2.png 2x" alt="Закладная под светильник">
+                </picture>
+                <div class="ceiling-products__title">Закладная под светильник</div>
+                <ul class="ceiling-products__list">
+                  <li>цвет прозрачный/белый</li>
+                  <li>d 60-120</li>
+                  <li>упаковка 100 шт</li>
+                </ul>
+                <div class="ceiling-products__buttons">
+                  <button class="btn btn-primary">Заказать</button>
+                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <div class="ceiling-products__item"></div>
+              <div class="ceiling-products__item">
+                <img class="ceiling-products__image" src="img/pvh_1-2.png" srcset="img/pvh_1-2.png 2x" alt="Закладная под светильник">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="ceiling-products__item">
+                <picture class="ceiling-products__picture">
+                  <source srcset="img/pvh_1-3.png 2x" media="(max-width: 767.98px)">
+                  <source srcset="img/pvh_1-3-md.png 2x" media="(min-width: 768px)">
+                  <img class="ceiling-products__image_mobile" src="img/pvh_1-3.png" srcset="img/pvh_1-3.png 2x" alt="Закладная под люстру">
+                </picture>
+                <div class="ceiling-products__title">Закладная под люстру</div>
+                <ul class="ceiling-products__list">
+                  <li>цвет прозрачный/белый</li>
+                  <li>d 180</li>
+                  <li>упаковка 50 шт</li>
+                </ul>
+                <div class="ceiling-products__buttons">
+                  <button class="btn btn-primary">Заказать</button>
+                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                </div>
+              </div>
             </div>
             <div class="col">
-              <div class="ceiling-products__item"></div>
+              <div class="ceiling-products__item">
+                <img class="ceiling-products__image" src="img/pvh_1-3.png" srcset="img/pvh_1-3.png 2x" alt="Закладная под люстру">
+              </div>
             </div>
-            <div class="col">
-              <div class="ceiling-products__item"></div>
-            </div>
-            <div class="col">
-              <div class="ceiling-products__item"></div>
-            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="section ">
+        <div class="container">
+          <h2 class="h2 text-center">Комплектующие для окон ПВХ</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
           </div>
         </div>
       </section>

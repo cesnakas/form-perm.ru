@@ -2,7 +2,13 @@
 
 @import 'bootstrap/scss/functions';
 
-@import 'bootstrap-custom';
+//@import 'bootstrap-custom';
+$primary: #66C3D0;
+$secondary: #2B2A29;
+$btn-color: #FFF;
+$navbar-toggler-focus-width: none;
+$navbar-light-toggler-border-color: transarent;
+$offcanvas-horizontal-width: 100vw;
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
