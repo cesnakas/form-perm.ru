@@ -9,6 +9,12 @@
     background-color: #F6F6F6;
   }
 
+  & .offcanvas .offcanvas-body {
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+    }
+  }
+
   &-text {
     display: flex;
     flex-direction: column;
