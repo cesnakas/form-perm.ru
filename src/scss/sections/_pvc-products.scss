@@ -1,0 +1,49 @@
+.pvc-products {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 320px;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: $section-bg-gray;
+  }
+
+  &__picture {
+    margin-bottom: 1.5rem;
+
+    img {
+      @include image-contain;
+      max-height: 144px;
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+
+  &__title {
+    margin-top: auto;
+    margin-bottom: .5rem;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    margin-bottom: .5rem;
+    color: #909090;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  &__button {
+
+  }
+}
