@@ -1,0 +1,19 @@
+footer {
+
+  &.navbar {
+    background-color: $section-bg-gray;
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-only(md) {
+      display: none;
+    }
+  }
+
+  .navbar-text {
+    @include media-breakpoint-up(md) {
+      align-items: flex-end;
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+header {
+
+  &.navbar {
+    @include media-breakpoint-up(md) {
+      background-color: $section-bg-gray;
+    }
+  }
+}
