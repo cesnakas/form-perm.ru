@@ -9,6 +9,18 @@ $btn-color: #FFF;
 $navbar-toggler-focus-width: none;
 $navbar-light-toggler-border-color: transarent;
 $offcanvas-horizontal-width: 100vw;
+$form-label-font-size: 13px;
+$form-label-font-weight: 600;
+$form-label-color: #515461;
+// input
+$input-bg: #F6F6F6;
+$input-color: #515461;
+$input-border-color: #909090;
+$input-border-radius: 5px;
+$input-placeholder-color: rgba(145,147,153,.5);
+$input-focus-border-color: $primary;
+$input-focus-width: 2px;
+$input-focus-box-shadow: 0 0 0 2px $primary;
 
 @import 'bootstrap/scss/variables';
 @import 'bootstrap/scss/variables-dark';
