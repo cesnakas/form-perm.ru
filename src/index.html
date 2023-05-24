@@ -7,7 +7,6 @@
 </head>
 <body>
   <div class="container">
-
     <header class="navbar navbar-expand-lg" role="banner">
       <div class="container gx-0 gx-md-5">
         <a class="navbar-brand" href="/">
@@ -29,16 +28,16 @@
 
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Производство</a>
+                <a class="nav-link" href="#blockManufacture">Производство</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Комплетующие для потолков</a>
+                <a class="nav-link" href="#blockCeiling">Комплетующие для потолков</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Комплетующие для окон ПВХ</a>
+                <a class="nav-link" href="#blockPvc">Комплетующие для окон ПВХ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Доставка</a>
+                <a class="nav-link" href="#blockMap">Доставка</a>
               </li>
             </ul>
             <div class="navbar-text align-items-lg-end text-lg-end">
@@ -54,7 +53,6 @@
         </div>
       </div>
     </header>
-
     <main role="main">
 
       <section class="section hero">
@@ -62,13 +60,13 @@
           <div class="row">
             <div class="col-lg-6">
               <h1>Комплектующие<br> <span>для натяжных потолков<br> и окон пвх</span></h1>
-              <button class="btn btn-sm btn-primary">Заказать расчет</button>
+              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Заказать расчет</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section manufacture">
+      <section class="section manufacture" id="blockManufacture">
         <div class="container gx-0">
           <div class="row gx-5">
             <div class="col-lg-6">
@@ -127,7 +125,7 @@
         </div>
       </section>
 
-      <section class="section ceiling-products">
+      <section class="section ceiling-products" id="blockCeiling">
         <div class="container gx-0">
           <h2 class="h2 text-center">Комплектующие для потолков</h2>
           <div class="row row-cols-1 row-cols-lg-2 g-3">
@@ -147,8 +145,8 @@
                   <li>сертификат</li>
                 </ul>
                 <div class="ceiling-products__buttons">
-                  <button class="btn btn-primary">Заказать</button>
-                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#imgModal" data-bs-title="Багет невидимый стеновой" data-bs-src="img/pvh_1-1.png">Смотреть схему</button>
                 </div>
               </div>
             </div>
@@ -172,8 +170,8 @@
                   <li>упаковка 100 шт</li>
                 </ul>
                 <div class="ceiling-products__buttons">
-                  <button class="btn btn-primary">Заказать</button>
-                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#imgModal" data-bs-title="Закладная под светильник" data-bs-src="img/pvh_1-2.png">Смотреть схему</button>
                 </div>
               </div>
             </div>
@@ -197,8 +195,8 @@
                   <li>упаковка 50 шт</li>
                 </ul>
                 <div class="ceiling-products__buttons">
-                  <button class="btn btn-primary">Заказать</button>
-                  <button class="btn btn-outline-primary">Смотреть схему</button>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#imgModal" data-bs-title="Закладная под люстру" data-bs-src="img/pvh_1-3.png">Смотреть схему</button>
                 </div>
               </div>
             </div>
@@ -211,7 +209,7 @@
         </div>
       </section>
       
-      <section class="section pvc-products">
+      <section class="section pvc-products" id="blockPvc">
         <div class="container gx-0">
           <h2 class="h2 text-center">Комплектующие для окон ПВХ</h2>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3">
@@ -224,7 +222,7 @@
                 <div class="pvc-products__title">Соединительная планка аналог 350</div>
                 <div class="pvc-products__subtitle">для профиля 70мм</div>
                 <div class="pvc-products__price d-none">65руб/м</div>
-                <button class="btn btn-primary pvc-products__button">Заказать</button>
+                <button class="btn btn-primary pvc-products__button" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
               </div>
             </div>
             <div class="col">
@@ -236,7 +234,7 @@
                 <div class="pvc-products__title">Соед инительная планка аналог 150</div>
                 <div class="pvc-products__subtitle">для профиля 58мм</div>
                 <div class="pvc-products__price d-none">55руб/м</div>
-                <button class="btn btn-primary pvc-products__button">Заказать</button>
+                <button class="btn btn-primary pvc-products__button" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
               </div>
             </div>
             <div class="col">
@@ -248,7 +246,7 @@
                 <div class="pvc-products__title">Подставочный профиль аналог 342</div>
                 <div class="pvc-products__subtitle"></div>
                 <div class="pvc-products__price d-none">35,6руб/м</div>
-                <button class="btn btn-primary pvc-products__button">Заказать</button>
+                <button class="btn btn-primary pvc-products__button" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
               </div>
             </div>
             <div class="col">
@@ -260,7 +258,7 @@
                 <div class="pvc-products__title">По дставочный профиль аналог 343</div>
                 <div class="pvc-products__subtitle"></div>
                 <div class="pvc-products__price d-none">34,5руб/м</div>
-                <button class="btn btn-primary pvc-products__button">Заказать</button>
+                <button class="btn btn-primary pvc-products__button" data-bs-toggle="modal" data-bs-target="#formModal">Заказать</button>
               </div>
             </div>
           </div>
@@ -276,12 +274,12 @@
               <source srcset="img/samples_bg-sm.png 2x" media="(max-width: 575.98px)">
               <img src="img/samples_bg-sm.png" alt="Получите бесплатные образцы ПВХ профилей" srcset="img/samples_bg-sm.png 2x">
             </picture>
-            <button class="btn btn-primary">Получить образцы</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formModal">Получить образцы</button>
           </div>
         </div>
       </section>
 
-      <section class="section map">
+      <section class="section map" id="blockMap">
         <div class="container gx-0">
           <picture class="map__picture">
             <source media="(max-width: 575.98px)" srcset="img/map-sm.svg 2x">
@@ -338,16 +336,16 @@
         <div class="navbar-collapse">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Производство</a>
+              <a class="nav-link" href="#blockManufacture">Производство</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Комплетующие для потолков</a>
+              <a class="nav-link" href="#blockCeiling">Комплетующие для потолков</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Комплетующие для окон ПВХ</a>
+              <a class="nav-link" href="#blockPvc">Комплетующие для окон ПВХ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Доставка</a>
+              <a class="nav-link" href="#blockMap">Доставка</a>
             </li>
           </ul>
           <div class="navbar-text">
@@ -363,6 +361,58 @@
 
       </div>
     </footer>
+
+    <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <h3 class="modal__title" id="formModalLabel">Заказать расчет</h3>
+            <p class="modal__subtitle">Укажите ваши данные для связи</p>
+
+            <form action="">
+
+              <div class="mb-3">
+                <label for="NAME" class="form-label">Фамилия Имя Отчество*</label>
+                <input type="text" class="form-control" id="NAME" placeholder="Имя">
+              </div>
+
+              <div class="mb-4">
+                <label for="PHONE" class="form-label">Контактный телефон*</label>
+                <input type="tel" class="form-control" id="PHONE" placeholder="+7 (---) -- -- ---">
+              </div>
+
+              <div class="d-grid gap-3">
+                <button type="submit" class="btn btn-primary">Отправить</button>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="formCheckModal" checked>
+                  <label class="form-check-label" for="formCheckModal">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title visually-hidden" id="imgModalLabel"></h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>

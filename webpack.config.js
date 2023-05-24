@@ -23,7 +23,22 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.html$/i, loader: 'html-loader', options: {minimize: true} },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          minimize: true,
+          sources: {
+            list: [
+              "...",
+              {
+                attribute: "data-bs-src",
+                type: "src",
+              }
+            ]
+          }
+        }
+      },
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,

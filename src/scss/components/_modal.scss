@@ -1,0 +1,39 @@
+.modal {
+  --bs-modal-width: 528px;
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    opacity: .6;
+  }
+
+  @at-root
+  #formModal &-body {
+    @media (min-width: 768px) {
+      padding: 0 5.5rem 2rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: center;
+    color: #909090;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "webpack build --mode=prodaction",
+    "build": "webpack build --mode=production",
     "dev": "webpack serve --mode=development --watch",
     "vite:dev": "vite",
     "vite:build": "vite build",
