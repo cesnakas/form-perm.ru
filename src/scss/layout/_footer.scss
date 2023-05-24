@@ -5,8 +5,11 @@ footer {
   }
 
   .navbar-nav {
-    @include media-breakpoint-only(md) {
+    @include media-breakpoint-up(md) {
       display: none;
+    }
+    @include media-breakpoint-up(xl) {
+      display: flex;
     }
   }
 

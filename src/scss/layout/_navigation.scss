@@ -1,26 +1,33 @@
 .navbar {
   --bs-nav-link-font-size: .875rem;
-  --bs-nav-link-font-weight: 600;
-  --bs-nav-link-color: #2B2A29;
+
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   border-radius: 1.25rem;
 
-  & .offcanvas .offcanvas-body {
+  & .offcanvas {
     @include media-breakpoint-up(lg) {
-      align-items: center;
+      width: 400px;
+    }
+
+    .offcanvas-body {
+      @include media-breakpoint-up(lg) {
+        align-items: center;
+      }
     }
   }
 
   &-text {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     @include media-breakpoint-only(lg) {
-      flex-basis: 35%;
+
     }
 
     a {
-      width: fit-content;
+      width: max-content;
+      font-size: 18px;
       font-weight: 400;
       line-height: 1.2;
       text-decoration: none;
@@ -36,5 +43,10 @@
       line-height: 1.2;
       color: #909090;
     }
+  }
+
+  .nav-link {
+    --bs-nav-link-font-weight: 600;
+    --bs-nav-link-color: #2B2A29;
   }
 }

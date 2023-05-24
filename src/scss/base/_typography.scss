@@ -1,4 +1,15 @@
+.h1 {}
+
 .h2 {
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 48px;
+  }
 }

@@ -1,5 +1,8 @@
 .section {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 2.5rem;
+  }
 
   &__bg--gray {
     background-color: $section-bg-gray;

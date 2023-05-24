@@ -1,17 +1,23 @@
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   height: 368px;
-  padding: 1rem 2.5rem;
+  padding: 1rem;
   border-radius: $section-border-radius;
   background-color: $section-bg-gray;
   background-position: 100% 50%;
   background-repeat: no-repeat;
-  background-size: 100%, contain;
+  background-size: 100% auto;
   background-image: url(../img/hero_bg-xs.png);
   @include media-breakpoint-up(md) {
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background-position: 115% 50%;
     background-size: contain;
     background-image: url(../img/hero_bg-md.png);
+  }
+  @include media-breakpoint-up(lg) {
+    background-position: 100% 50%;
   }
   @include media-breakpoint-up(xl) {
     height: 512px;
@@ -20,9 +26,16 @@
 
   h1 {
     margin-bottom: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     line-height: 1.1;
     color: #2B2A29;
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 48px;
+    }
 
     span {
       color: #66C3D0;

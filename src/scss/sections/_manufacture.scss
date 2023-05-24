@@ -21,6 +21,10 @@
     }
 
     & ~ p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.2;
+
       span {
         color: $color-primary;
       }
@@ -37,6 +41,15 @@
 
       svg {
         margin-bottom: .5rem;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.4;
+        @include media-breakpoint-up(lg) {
+          font-size: 15px;
+        }
       }
     }
   }
