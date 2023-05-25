@@ -5,10 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
-  // context: __dirname,
+  context: __dirname,
   resolve: {
     roots: [path.resolve(__dirname, 'src')],
-    alias: {'@': path.resolve(__dirname, 'src')},
   },
   entry: {
     app: './src/js/main.js',
@@ -22,7 +21,11 @@ module.exports = {
     compress: true,
     open: true,
     hot: true,
-    watchFiles: [path.resolve(__dirname), 'src/**/*.html']
+    watchFiles: [
+      path.resolve(__dirname, 'src/**/*.html'),
+      path.resolve(__dirname, 'src/scss/**/*.scss'),
+      path.resolve(__dirname, 'src/js/**/*.js'),
+    ]
   },
   module: {
     rules: [
