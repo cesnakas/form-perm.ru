@@ -31,6 +31,12 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
+    @include media-breakpoint-up(lg) {
+      font-size: 32px;
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: 40px;
+    }
   }
 
   &__text {

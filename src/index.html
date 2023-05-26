@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ФОРМ</title>
   <link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml">
+  <script type="module" src="js/main.js"></script>
 </head>
 <body>
   <div class="container">
@@ -299,21 +300,23 @@
         <div class="container gx-0">
           <div class="form__inner">
             <h2 class="form__title">Заказать доставку</h2>
-            <form action="">
+            <form class="needs-validation" novalidate>
               <div class="row row-cols-1 row-cols-md-2 mb-md-3">
                 <div class="mb-3">
                   <label for="NAME" class="form-label">Фамилия Имя Отчество*</label>
-                  <input type="text" class="form-control" id="NAME" placeholder="Имя">
+                  <input type="text" class="form-control" id="NAME" placeholder="Имя" required>
+                  <div class="invalid-feedback">Пожалуйста заполните поле.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="PHONE" class="form-label">Контактный телефон*</label>
-                  <input type="tel" class="form-control" id="PHONE" placeholder="+7 (---) -- -- ---">
+                  <label for="formPhone" class="form-label">Контактный телефон*</label>
+                  <input type="tel" class="form-control" id="formPhone" placeholder="+7 (---) -- -- ---" required>
+                  <div class="invalid-feedback">Пожалуйста заполните поле.</div>
                 </div>
               </div>
               <div class="row flex-md-row-reverse align-items-md-center">
                 <div class="col-12 col-md-9">
                   <div class="mb-3 mb-lg-0 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked required>
                     <label class="form-check-label" for="exampleCheck1">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
                   </div>
                 </div>
@@ -374,23 +377,25 @@
             <h3 class="modal__title" id="formModalLabel">Заказать расчет</h3>
             <p class="modal__subtitle">Укажите ваши данные для связи</p>
 
-            <form action="">
+            <form method="POST" class="needs-validation" id="modalForm" novalidate>
 
               <div class="mb-3">
-                <label for="NAME" class="form-label">Фамилия Имя Отчество*</label>
-                <input type="text" class="form-control" id="NAME" placeholder="Имя">
+                <label for="modalName" class="form-label">Фамилия Имя Отчество*</label>
+                <input type="text" class="form-control" id="modalName" name="nameFF" placeholder="Имя" required>
+                <div class="invalid-feedback">Пожалуйста заполните поле.</div>
               </div>
 
               <div class="mb-4">
-                <label for="PHONE" class="form-label">Контактный телефон*</label>
-                <input type="tel" class="form-control" id="PHONE" placeholder="+7 (---) -- -- ---">
+                <label for="modalPhone" class="form-label">Контактный телефон*</label>
+                <input type="tel" class="form-control" id="modalPhone" name="contactFF" placeholder="+7 (---) -- -- ---" required>
+                <div class="invalid-feedback">Пожалуйста заполните поле.</div>
               </div>
 
               <div class="d-grid gap-3">
                 <button type="submit" class="btn btn-primary">Отправить</button>
 
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="formCheckModal" checked>
+                  <input type="checkbox" class="form-check-input" id="formCheckModal" name="agree" checked required>
                   <label class="form-check-label" for="formCheckModal">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
                 </div>
               </div>

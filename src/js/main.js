@@ -1,8 +1,9 @@
+// JS
+import * as bootstrap from 'bootstrap'
+import IMask from 'imask'
+// SCSS
 import '../scss/app.scss'
 
-// Bootstrap
-import * as bootstrap from 'bootstrap'
-import backdrop from "bootstrap/js/src/util/backdrop";
 
 // Nav scroll
 document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -26,6 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   })
 })
 
+
 // Close navbar
 const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasNavbar')
 const offcanvasLinkAll = document.querySelectorAll('#offcanvasNavbar .nav-link')
@@ -34,6 +36,7 @@ offcanvasLinkAll.forEach(elem => {
     bsOffcanvas.hide('slow')
   })
 })
+
 
 // Modal image
 const imgModal = document.getElementById('imgModal')
@@ -52,51 +55,42 @@ if (imgModal) {
   })
 }
 
+
+// Phone mask
+const maskFormPhone = document.getElementById('formPhone')
+const maskModalPhone = document.getElementById('modalPhone')
+const maskOptions = {
+  mask: '+{7} ({9}00) 000-00-00'
+}
+const mask1 = IMask(maskFormPhone, maskOptions)
+const mask2 = IMask(maskModalPhone, maskOptions)
+
+
+// Forms validation
+const forms = document.querySelectorAll('.needs-validation')
+Array.from(forms).forEach(form => {
+  form.addEventListener('submit', event => {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+    form.classList.add('was-validated')
+  }, false)
+})
+
 // Form
-var modal_init = function() {
-
-  var modalWrapper = document.getElementById("modal_wrapper");
-  var modalWindow  = document.getElementById("modal_window");
-
-  var openModal = function(e)
-  {
-    modalWrapper.className = "overlay";
-    var overflow = modalWindow.offsetHeight - document.documentElement.clientHeight;
-    if(overflow > 0) {
-      modalWindow.style.maxHeight = (parseInt(window.getComputedStyle(modalWindow).height) - overflow) + "px";
+document.getElementById('formModal').onsubmit = function(){
+  let http = new XMLHttpRequest()
+  http.open('POST', 'mail.php', true)
+  http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  http.send('nameFF=' + this.nameFF.value + '&contactFF=' + this.contactFF.value + '&messageFF=' + this.messageFF.value)
+  http.onreadystatechange = function() {
+    if (http.readyState == 4 && http.status == 200) {
+      alert(http.responseText + ', Ваша заявка отправлена.\nНаши специалисты ответят Вам в ближайшее время.')
     }
-    modalWindow.style.marginTop = (-modalWindow.offsetHeight)/2 + "px";
-    modalWindow.style.marginLeft = (-modalWindow.offsetWidth)/2 + "px";
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-  };
-
-  var closeModal = function(e)
-  {
-    modalWrapper.className = "";
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-  };
-
-  var clickHandler = function(e) {
-    if(!e.target) e.target = e.srcElement;
-    if(e.target.tagName == "DIV") {
-      if(e.target.id != "modal_window") closeModal(e);
-    }
-  };
-
-  var keyHandler = function(e) {
-    if(e.keyCode == 27) closeModal(e);
-  };
-
-  if(document.addEventListener) {
-    document.getElementById("modal_open").addEventListener("click", openModal, false);
-    document.getElementById("modal_close").addEventListener("click", closeModal, false);
-    document.addEventListener("click", clickHandler, false);
-    document.addEventListener("keydown", keyHandler, false);
-  } else {
-    document.getElementById("modal_open").attachEvent("onclick", openModal);
-    document.getElementById("modal_close").attachEvent("onclick", closeModal);
-    document.attachEvent("onclick", clickHandler);
-    document.attachEvent("onkeydown", keyHandler);
   }
-
-};
+  http.onerror = function() {
+    alert('Извините, данные не были переданы')
+  }
+  return false;
+}
