@@ -377,7 +377,7 @@
             <h3 class="modal__title" id="formModalLabel">Заказать расчет</h3>
             <p class="modal__subtitle">Укажите ваши данные для связи</p>
 
-            <form method="POST" class="needs-validation" id="modalForm" novalidate>
+            <form action="mail.php" method="POST" class="needs-validation" id="modalForm" novalidate>
 
               <div class="mb-3">
                 <label for="modalName" class="form-label">Фамилия Имя Отчество*</label>
@@ -395,7 +395,7 @@
                 <button type="submit" class="btn btn-primary">Отправить</button>
 
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="formCheckModal" name="agree" checked required>
+                  <input type="checkbox" class="form-check-input" id="formCheckModal" name="agreeFF" checked required>
                   <label class="form-check-label" for="formCheckModal">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
                 </div>
               </div>

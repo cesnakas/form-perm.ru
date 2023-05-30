@@ -3,6 +3,7 @@ import * as bootstrap from 'bootstrap'
 import IMask from 'imask'
 // SCSS
 import '../scss/app.scss'
+import data from "bootstrap/js/src/dom/data";
 
 
 // Nav scroll
@@ -79,18 +80,35 @@ Array.from(forms).forEach(form => {
 })
 
 // Form
-document.getElementById('formModal').onsubmit = function(){
-  let http = new XMLHttpRequest()
-  http.open('POST', 'mail.php', true)
-  http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-  http.send('nameFF=' + this.nameFF.value + '&contactFF=' + this.contactFF.value + '&messageFF=' + this.messageFF.value)
-  http.onreadystatechange = function() {
-    if (http.readyState == 4 && http.status == 200) {
-      alert(http.responseText + ', Ваша заявка отправлена.\nНаши специалисты ответят Вам в ближайшее время.')
+document.getElementById('formModal').addEventListener('submit', postAjax)
+function postAjax(e) {
+  e.preventDefault()
+
+  let xhr = new XMLHttpRequest()
+  let f = this
+
+  xhr.open('POST', 'https://form-perm.ru/mail.php', true)
+
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  xhr.send('nameFF=' + this.nameFF + '&contactFF=' + this.contactFF + '&agreeFF=' + this.agreeFF)
+
+  xhr.onreadystatechange = function () {
+
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      // console.log(xhr.responseText)
+      alert(xhr.responseText + ', Ваше сообщение получено.\nБлагодарим за проявленный интерес!\nНаши специалисты ответят Вам в ближайшее время.')
+      f.contactFF.removeAttribute('value')
+      f.contactFF.value = ''
+
+    } else if (xhr.onerror === 404) {
+      // console.log('Error')
+      alert('Извините, данные не были переданы')
+    }
+
+    xhr.onerror = function () {
+      alert('Извините, данные не были переданы');
     }
   }
-  http.onerror = function() {
-    alert('Извините, данные не были переданы')
-  }
-  return false;
+  // xhr.send(new FormData(e.target))
+  return false
 }
