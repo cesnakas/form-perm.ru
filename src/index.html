@@ -300,24 +300,24 @@
         <div class="container gx-0">
           <div class="form__inner">
             <h2 class="form__title">Заказать доставку</h2>
-            <form class="needs-validation" novalidate>
+            <form method="POST" class="needs-validation" id="staticFormFeedback" novalidate>
               <div class="row row-cols-1 row-cols-md-2 mb-md-3">
                 <div class="mb-3">
-                  <label for="NAME" class="form-label">Фамилия Имя Отчество*</label>
-                  <input type="text" class="form-control" id="NAME" placeholder="Имя" required>
+                  <label for="staticName" class="form-label">Фамилия Имя Отчество*</label>
+                  <input type="text" class="form-control" id="staticName" placeholder="Имя" name="staticNameFF" required>
                   <div class="invalid-feedback">Пожалуйста заполните поле.</div>
                 </div>
                 <div class="mb-3">
-                  <label for="formPhone" class="form-label">Контактный телефон*</label>
-                  <input type="tel" class="form-control" id="formPhone" placeholder="+7 (---) -- -- ---" required>
+                  <label for="staticContact" class="form-label">Контактный телефон*</label>
+                  <input type="tel" class="form-control" id="staticContact" name="staticContactFF" placeholder="+7 (---) -- -- ---" required>
                   <div class="invalid-feedback">Пожалуйста заполните поле.</div>
                 </div>
               </div>
               <div class="row flex-md-row-reverse align-items-md-center">
                 <div class="col-12 col-md-9">
                   <div class="mb-3 mb-lg-0 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked required>
-                    <label class="form-check-label" for="exampleCheck1">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
+                    <input type="checkbox" class="form-check-input" id="staticCheck" name="staticCheckFF" checked required>
+                    <label class="form-check-label" for="staticCheck">Я согласен на обработку и передачу персональных данных <a href="" target="_blank">Конфиденциальность</a>.</label>
                   </div>
                 </div>
                 <div class="col-12 col-md-3">
@@ -377,7 +377,7 @@
             <h3 class="modal__title" id="formModalLabel">Заказать расчет</h3>
             <p class="modal__subtitle">Укажите ваши данные для связи</p>
 
-            <form action="mail.php" method="POST" class="needs-validation" id="modalForm" novalidate>
+            <form method="POST" class="needs-validation" id="modalFormFeedback" novalidate>
 
               <div class="mb-3">
                 <label for="modalName" class="form-label">Фамилия Имя Отчество*</label>
@@ -411,10 +411,32 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title visually-hidden" id="imgModalLabel"></h3>
+            <h5 class="modal-title visually-hidden" id="imgModalLabel"></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="formSuccess" tabindex="-1" aria-labelledby="formSuccessLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title visually-hidden" id="formSuccessLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <svg xmlns="http://www.w3.org/2000/svg" class="modal__image-success" width="114" height="113" fill="#48C95F" viewBox="0 0 114 113">
+              <path fill-rule="evenodd" d="M99.3604 51.6698h.0142c2.5944 0 4.7034 2.0999 4.7084 4.6942.038 12.576-4.8261 24.4174-13.6966 33.335-8.8658 8.9176-20.6743 13.847-33.2503 13.885h-.1365c-12.5289 0-24.3139-4.8591-33.1985-13.6966-8.9176-8.8658-13.8472-20.6743-13.88487-33.2503-.03766-12.5807 4.82607-24.4174 13.69657-33.335C32.4786 14.3845 44.2871 9.4549 56.863 9.41724c3.7432.0565 7.5569.43316 11.2106 1.30896 2.5236.612 4.0821 3.1545 3.47 5.6829-.6074 2.5237-3.164 4.0774-5.6782 3.4748-2.9239-.7063-6.0267-1.0029-8.9741-1.05-10.0617.0283-19.5114 3.9738-26.6021 11.107-7.0955 7.1331-10.9846 16.6062-10.9563 26.668.0282 10.0617 3.9738 19.5066 11.107 26.602 7.1095 7.0672 16.5356 10.9563 26.5597 10.9563h.1083c10.0617-.0282 19.5113-3.9738 26.602-11.1069 7.0955-7.1379 10.9846-16.6063 10.9563-26.668-.0047-2.599 2.0952-4.7178 4.6942-4.7225Zm-59.8137 1.5014c1.841-1.841 4.8167-1.841 6.6576 0l10.5655 10.5655 29.6484-33.8812c1.7138-1.9446 4.6848-2.1517 6.6435-.4379 1.9539 1.7091 2.1517 4.6848.4378 6.6435L60.5412 73.7277c-.8569.9794-2.0811 1.5585-3.3853 1.6056h-.1554c-1.2477 0-2.4436-.4944-3.3288-1.3796l-14.125-14.125c-1.8409-1.8409-1.8409-4.8166 0-6.6575Z" clip-rule="evenodd"/>
+            </svg>
+            <h4 class="modal__title">Заявка принята</h4>
+            <p class="modal__subtitle">Спасибо! Ваше обращение отправлено.</p>
+            <br>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

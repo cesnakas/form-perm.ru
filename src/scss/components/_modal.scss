@@ -18,7 +18,8 @@
   }
 
   @at-root
-  #formModal &-body {
+  #formModal &-body,
+  #formSuccess &-body {
     @media (min-width: 768px) {
       padding: 0 5.5rem 2rem;
     }
@@ -27,6 +28,11 @@
   &__image {
     width: 100%;
     height: auto;
+
+    &-success {
+      width: 100%;
+      margin: 0 auto 1.5rem;
+    }
   }
 
   &__content {
