@@ -2,11 +2,16 @@
   "name": "form-perm.ru",
   "private": true,
   "scripts": {
-    "build": "webpack build --mode=production",
-    "dev": "webpack serve --mode=development --watch",
+    "webpack:build": "webpack build --mode=production",
+    "webpack:dev": "webpack serve --mode=development --watch",
     "vite:dev": "vite",
     "vite:build": "vite build",
     "vite:preview": "vite preview"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.0",
+    "imask": "^6.6.2"
   },
   "devDependencies": {
     "@babel/core": "latest",
@@ -18,14 +23,9 @@
     "sass": "latest",
     "sass-loader": "latest",
     "style-loader": "latest",
-    "vite": "^4.3.3",
+    "vite": "^4.3.9",
     "webpack": "latest",
     "webpack-cli": "latest",
     "webpack-dev-server": "latest"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.7",
-    "bootstrap": "5.3.0-alpha3",
-    "imask": "^6.6.1"
   }
 }

@@ -1,7 +1,7 @@
 <?php
 
 if (!empty($_POST["nameFF"]) && !empty($_POST["contactFF"])) {
-  $to = "s.cesnakas@yandex.ru";
+  $to = "s.cesnakas@yandex.ru, tatyana.karpova@vmeste.company";
   $subject = "Заполнена контактная форма с " . $_SERVER['HTTP_REFERER'];
   $subject = "=?utf-8?b?" . base64_encode($subject) . "?=";
   $message = "Имя: " . $_POST["nameFF"] . "\nТелефон: " . $_POST["contactFF"] . "\nIP: " . $_SERVER['REMOTE_ADDR'] . "\nAgreement: " . $_POST["agreeFF"];
