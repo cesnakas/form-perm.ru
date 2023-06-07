@@ -79,8 +79,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
-        document.querySelector('#staticFormFeedback').addEventListener('submit', staticFormFeedback, false)
-        document.querySelector('#modalFormFeedback').addEventListener('submit', modalFormFeedback, false)
       }
       form.classList.add('was-validated')
     }, false)
@@ -92,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const successModal = new bootstrap.Modal(document.querySelector('#formSuccess'))
 
   // Form Static
-  function staticFormFeedback(e) {
+  document.querySelector('#staticFormFeedback').addEventListener('submit', function staticFormFeedback(e) {
     const staticForm = document.forms.staticForm
     if (staticForm.staticNameFF.value.length > 0 && staticForm.staticContactFF.value.length > 0) {
       let xhr = new XMLHttpRequest()
@@ -113,10 +111,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
         e.target.reset()
       }
     }
-  }
+  })
 
   // Form Modal
-  function modalFormFeedback(e) {
+  document.querySelector('#modalFormFeedback').addEventListener('submit', function modalFormFeedback(e) {
     const modalForm = document.forms.modalForm
     if (modalForm.nameFF.value.length > 0 && modalForm.contactFF.value.length > 0) {
       let xhr = new XMLHttpRequest()
@@ -138,6 +136,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
         e.target.reset()
       }
     }
-  }
+  })
 
 })
