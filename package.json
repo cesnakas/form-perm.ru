@@ -1,6 +1,7 @@
 {
   "name": "form-perm.ru",
   "private": true,
+  "type": "module",
   "scripts": {
     "webpack:build": "webpack build --mode=production",
     "webpack:dev": "webpack serve --mode=development --watch",

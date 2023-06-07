@@ -76,17 +76,13 @@ document.addEventListener('DOMContentLoaded', function (event) {
   const forms = document.querySelectorAll('.needs-validation')
   Array.from(forms).forEach(form => {
     form.addEventListener('submit', event => {
-
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
-
         document.querySelector('#staticFormFeedback').addEventListener('submit', staticFormFeedback, false)
         document.querySelector('#modalFormFeedback').addEventListener('submit', modalFormFeedback, false)
       }
-
       form.classList.add('was-validated')
-
     }, false)
   })
 
@@ -97,41 +93,50 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   // Form Static
   function staticFormFeedback(e) {
-    let xhr = new XMLHttpRequest()
-    let f = this
-    e.preventDefault()
-    xhr.open('POST', 'https://form-perm.ru/mail.php', true)
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-    xhr.send('staticNameFF=' + f.staticNameFF.value + '&staticContactFF=' + f.staticContactFF.value + '&staticCheckFF=' + f.staticCheckFF.value)
+    const staticForm = document.forms.staticForm
+    if (staticForm.staticNameFF.value.length > 0 && staticForm.staticContactFF.value.length > 0) {
+      let xhr = new XMLHttpRequest()
+      let f = this
+      e.preventDefault()
+      xhr.open('POST', 'https://form-perm.ru/mail.php', true)
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+      xhr.send('staticNameFF=' + f.staticNameFF.value + '&staticContactFF=' + f.staticContactFF.value + '&staticCheckFF=' + f.staticCheckFF.value)
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // console.log(xhr.responseText)
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          // console.log(xhr.responseText)
+        }
       }
-    }
-    xhr.onloadend = function () {
-      successModal.show()
-      e.target.reset()
+      xhr.onloadend = function () {
+        successModal.show()
+        e.target.classList.remove('was-validated')
+        e.target.reset()
+      }
     }
   }
 
   // Form Modal
   function modalFormFeedback(e) {
-    let xhr = new XMLHttpRequest()
-    let f = this
-    e.preventDefault()
-    xhr.open('POST', 'https://form-perm.ru/mail.php', true)
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-    xhr.send('nameFF=' + f.nameFF.value + '&contactFF=' + f.contactFF.value + '&agreeFF=' + f.agreeFF.value)
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // console.log(xhr.responseText)
+    const modalForm = document.forms.modalForm
+    if (modalForm.nameFF.value.length > 0 && modalForm.contactFF.value.length > 0) {
+      let xhr = new XMLHttpRequest()
+      let f = this
+      e.preventDefault()
+      xhr.open('POST', 'https://form-perm.ru/mail.php', true)
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+      xhr.send('nameFF=' + f.nameFF.value + '&contactFF=' + f.contactFF.value + '&agreeFF=' + f.agreeFF.value)
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          // console.log(xhr.responseText)
+        }
       }
-    }
-    xhr.onloadend = function () {
-      formModal.hide()
-      successModal.show()
-      e.target.reset()
+      xhr.onloadend = function () {
+        formModal.hide()
+        successModal.show()
+        e.target.classList.remove('was-validated')
+        e.target.reset()
+      }
     }
   }
 
